@@ -2,6 +2,7 @@ import java.io.File;
 import java.util.Arrays;
 
 import net.minecraft.client.main.Main;
+/** Edited by BlackDev **/
 
 /**
  * Welcome to MCP 1.8.9 for Maven
@@ -16,10 +17,30 @@ import net.minecraft.client.main.Main;
 public class Start {
     public static void main(String[] args) {
         // Provide natives
-        // Currently supported Linux and Windows
-        System.setProperty("org.lwjgl.librarypath", new File("../test_natives/" + (System.getProperty("os.name").startsWith("Windows") ? "windows" : "linux")).getAbsolutePath());
+        // Now supports Linux, Windows, and macOS
+        String osName = System.getProperty("os.name").toLowerCase();
+        String nativePath;
 
-        Main.main(concat(new String[]{"--version", "MavenMCP", "--accessToken", "0", "--assetsDir", "assets", "--assetIndex", "1.8", "--userProperties", "{}"}, args));
+        if (osName.contains("win")) {
+            nativePath = "../natives/windows";
+        } else if (osName.contains("mac")) {
+            nativePath = "../natives/osx";
+        } else if (osName.contains("nix") || osName.contains("nux")) {
+            nativePath = "../natives/linux";
+        } else {
+            throw new UnsupportedOperationException("Unsupported operating system: " + osName);
+        }
+
+        System.setProperty("org.lwjgl.librarypath", new File(nativePath).getAbsolutePath());
+
+        Main.main(concat(new String[]{
+                        "--version", "MavenMCP",
+                        "--accessToken", "0",
+                        "--assetsDir", "assets",
+                        "--assetIndex", "1.8",
+                        "--userProperties", "{}"},
+                args)
+        );
     }
 
     public static <T> T[] concat(T[] first, T[] second) {
