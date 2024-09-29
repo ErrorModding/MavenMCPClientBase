@@ -27,12 +27,18 @@ public class Start {
     public static void main(String[] args) {
         // Detect the operating system
         String osName = System.getProperty("os.name").toLowerCase();
+        String osArch = System.getProperty("os.arch").toLowerCase();
         String nativePath;
 
         if (osName.contains("win")) {
             nativePath = "../natives/windows";
         } else if (osName.contains("mac")) {
-            nativePath = "../natives/osx";
+        // Check for Apple Silicon (M1, M2) or Intel
+        if (osArch.contains("aarch64") || osArch.contains("arm64")) {
+            nativePath = "../natives/osx_silicon";
+        } else {
+            nativePath = "../natives/osx";  // Path for Intel Macs
+        }
         } else if (osName.contains("nix") || osName.contains("nux")) {
             nativePath = "../natives/linux";
         } else {
