@@ -2,7 +2,9 @@ import java.io.File;
 import java.util.Arrays;
 
 import net.minecraft.client.main.Main;
-/** Edited by BlackDev **/
+/** Edited by BlackDev
+ * I added MacOS Support for Intel Macs
+ * **/
 
 /**
  * Welcome to MCP 1.8.9 for Maven
