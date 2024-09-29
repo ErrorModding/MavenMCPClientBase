@@ -1,9 +1,16 @@
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 
 import net.minecraft.client.main.Main;
+
+
 /** Edited by BlackDev
- * I added MacOS Support for Intel Macs
+ * I added macOS Support for Intel Macs
+ * Main Creddits to Marcelektro and thank you for doing this.
+ * you btw need to use this specific jdk
+ * https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/tag/jdk8u242-b08
  * **/
 
 /**
@@ -18,8 +25,7 @@ import net.minecraft.client.main.Main;
 
 public class Start {
     public static void main(String[] args) {
-        // Provide natives
-        // Now supports Linux, Windows, and macOS
+        // Detect the operating system
         String osName = System.getProperty("os.name").toLowerCase();
         String nativePath;
 
@@ -33,8 +39,14 @@ public class Start {
             throw new UnsupportedOperationException("Unsupported operating system: " + osName);
         }
 
-        System.setProperty("org.lwjgl.librarypath", new File(nativePath).getAbsolutePath());
+        // Update the path to point to your actual native folder location
+        String absoluteNativePath = new File("/Users/bluefarukon/Documents/GitHub/MavenMCP-1.8.9-all-os/natives/osx").getAbsolutePath();
+        System.out.println("Native library path: " + absoluteNativePath);
 
+        // Set the native library path for LWJGL
+        System.setProperty("org.lwjgl.librarypath", absoluteNativePath);
+
+        // Start the Minecraft client with the necessary arguments
         Main.main(concat(new String[]{
                         "--version", "MavenMCP",
                         "--accessToken", "0",
