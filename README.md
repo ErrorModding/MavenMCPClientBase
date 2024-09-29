@@ -4,6 +4,8 @@
 ## You need to Use this thecific JDK for it to work on macos 
 `https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/tag/jdk8u242-b08`
 
+The top Comment was added by BlackDev Who added MacOS Support
+
 
 ### About
 Maven MCP 1.8.9 is an updated version of MCP. It uses Maven, has a clean code structure, supports Linux and version control in your projects!
