@@ -1,14 +1,16 @@
-[17:54:11] [Client thread/ERROR]: Can't find the resource index file: assets/indexes/1.8.json
-[17:54:11] [Client thread/INFO]: Setting user: Player49
-[17:54:11] [Client thread/INFO]: (Session ID is token:0:Player49)
-[17:54:11] [Client thread/INFO]: LWJGL Version: 2.9.4
-[17:54:13] [Client thread/INFO]: Reloading ResourceManager: Default
-[17:54:13] [Client thread/ERROR]: Couldn't initialize twitch stream
-[17:54:13] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[17:54:14] [Thread-5/INFO]: Initializing LWJGL OpenAL
-[17:54:14] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[17:54:16] [Client thread/INFO]: Created: 512x512 textures-atlas
-[17:54:16] [Client thread/ERROR]: Realms module missing
+[20:04:53] [Client thread/ERROR]: Can't find the resource index file: assets/indexes/1.8.json
+[20:04:53] [Client thread/INFO]: Setting user: Player943
+[20:04:53] [Client thread/INFO]: (Session ID is token:0:Player943)
+[20:04:53] [Client thread/INFO]: LWJGL Version: 2.9.4
+[20:04:54] [Client thread/INFO]: Reloading ResourceManager: Default
+[20:04:55] [Client thread/ERROR]: Couldn't initialize twitch stream
+[20:04:55] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[20:04:55] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[20:04:55] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[20:04:57] [Client thread/INFO]: Created: 512x512 textures-atlas
+[20:04:57] [Thread-6/INFO]: OpenAL initialized.
+[20:04:57] [Sound Library Loader/INFO]: Sound engine started
+[20:04:57] [Client thread/ERROR]: Realms module missing
 java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNotificationsScreen
 	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_422-internal]
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:418) ~[?:1.8.0_422-internal]
@@ -24,10 +26,7 @@ java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNoti
 	at net.minecraft.client.Minecraft.run(Minecraft.java:406) [classes/:?]
 	at net.minecraft.client.main.Main.main(Main.java:113) [classes/:?]
 	at Start.main(Start.java:50) [test-classes/:?]
-[17:54:17] [Thread-5/INFO]: OpenAL initialized.
-[17:54:17] [Sound Library Loader/INFO]: Sound engine started
-[17:54:22] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:music.menu
-[17:54:27] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
-[17:54:28] [Client thread/INFO]: Stopping!
-[17:54:28] [Client thread/INFO]: SoundSystem shutting down...
-[17:54:28] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[20:05:00] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[20:05:00] [Client thread/INFO]: Stopping!
+[20:05:00] [Client thread/INFO]: SoundSystem shutting down...
+[20:05:00] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
