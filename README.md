@@ -1,8 +1,10 @@
 # MavenMCP 1.8.9
 
 # !Warning!
-## You need to Use this thecific JDK for it to work on macos 
+## You need to Use this specific JDK for it to work on macos 
 `https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/tag/jdk8u242-b08`
+
+The top Comment was added by BlackDev Who added MacOS Support
 
 
 ### About
